@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Exercise Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="time">2:59</div>
+            <div class="header-icons">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-quarter"></i>
+                <span class="battery-text">3</span>
+            </div>
+        </header>
+
+        <!-- Exercise Section -->
+        <div class="exercise-section">
+            <!-- Back Button -->
+            <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+
+            <!-- Exercise Image Upload -->
+            <div class="exercise-image-container">
+                <div class="image-upload-area" id="imageUploadArea">
+                    <i class="fas fa-camera"></i>
+                    <p>Click to upload exercise image</p>
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                </div>
+                <div class="exercise-image" id="exerciseImage" style="display: none;">
+                    <img id="uploadedImage" src="" alt="Exercise">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise Brand and Name -->
+            <div class="exercise-info">
+                <div class="brand-input">
+                    <input type="text" id="brandInput" placeholder="Brand (e.g., UNICA)" value="UNICA">
+                </div>
+                <div class="exercise-name-input">
+                    <input type="text" id="exerciseNameInput" placeholder="Exercise Name (e.g., Arm curl)" value="Arm curl">
+                </div>
+            </div>
+
+            <!-- Target Section -->
+            <div class="target-section">
+                <div class="target-header">
+                    <span>Target</span>
+                    <span>Repetitions</span>
+                </div>
+                <div class="target-input">
+                    <input type="number" id="targetReps" placeholder="Target reps" value="10">
+                </div>
+            </div>
+
+            <!-- Sets Section -->
+            <div class="sets-section">
+                <div class="sets-container" id="setsContainer">
+                    <!-- Sets will be dynamically added here -->
+                </div>
+                <button class="add-set-btn" id="addSetBtn">
+                    <i class="fas fa-plus"></i>
+                    ADD SET
+                </button>
+            </div>
+
+            <!-- Add Button -->
+            <button class="add-exercise-btn" id="addExerciseBtn">
+                ADD
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
